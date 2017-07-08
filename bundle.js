@@ -1,16 +1,27 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var SimplePeer = require('simple-peer');
+var Peer = require('simple-peer');
+var p = new Peer({ initiator: location.hash === '#1', trickle: false });
 
-  var peer = new SimplePeer({channelName: 'cloudbrowserawt',})
+p.on('error', function (err) { console.log('error', err) });
 
-  peer.on('stream', function (stream) {
-    // got remote video stream, now let's show it in a video tag
-    console.log(stream);
-    var video = document.querySelector('video')
-    video.src = window.URL.createObjectURL(stream)
-    video.play()
-  });
+p.on('signal', function (data) {
+  console.log('SIGNAL', JSON.stringify(data));
+  document.querySelector('#outgoing').textContent = JSON.stringify(data);
+})
 
+document.querySelector('form').addEventListener('submit', function (ev) {
+  ev.preventDefault();
+  p.signal(JSON.parse(document.querySelector('#incoming').value));
+})
+
+p.on('connect', function () {
+  console.log('CONNECT');
+  p.send('whatever' + Math.random());
+})
+
+p.on('data', function (data) {
+  console.log('data: ' + data);
+})
 },{"simple-peer":21}],2:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.

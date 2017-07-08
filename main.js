@@ -1,11 +1,23 @@
-var SimplePeer = require('simple-peer');
+var Peer = require('simple-peer');
+var p = new Peer({ initiator: location.hash === '#1', trickle: false });
 
-  var peer = new SimplePeer({channelName: 'cloudbrowserawt',})
+p.on('error', function (err) { console.log('error', err) });
 
-  peer.on('stream', function (stream) {
-    // got remote video stream, now let's show it in a video tag
-    console.log(stream);
-    var video = document.querySelector('video')
-    video.src = window.URL.createObjectURL(stream)
-    video.play()
-  });
+p.on('signal', function (data) {
+  console.log('SIGNAL', JSON.stringify(data));
+  document.querySelector('#outgoing').textContent = JSON.stringify(data);
+})
+
+document.querySelector('form').addEventListener('submit', function (ev) {
+  ev.preventDefault();
+  p.signal(JSON.parse(document.querySelector('#incoming').value));
+})
+
+p.on('connect', function () {
+  console.log('CONNECT');
+  p.send('whatever' + Math.random());
+})
+
+p.on('data', function (data) {
+  console.log('data: ' + data);
+})
