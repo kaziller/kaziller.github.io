@@ -34,5 +34,7 @@ var hub = signalhub('my-app-name', [
 hub.subscribe('my-channel')
   .on('data', function (message) {
     console.log('new message received', message)
-    gotMedia(message);
+    if(message.type === offer) {
+      gotMedia(message);
+    }
   });
