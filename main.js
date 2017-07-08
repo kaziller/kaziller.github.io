@@ -1,8 +1,8 @@
 var SimplePeer = require('simple-peer');
 
-  var peer2 = new SimplePeer();
+  var peer = new SimplePeer({channelName: 'cloudbrowserawt',})
 
-  peer2.on('stream', function (stream) {
+  peer.on('stream', function (stream) {
     // got remote video stream, now let's show it in a video tag
     var video = document.querySelector('video')
     video.src = window.URL.createObjectURL(stream)
