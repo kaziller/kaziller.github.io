@@ -21,3 +21,10 @@ p.on('connect', function () {
 p.on('data', function (data) {
   console.log('data: ' + data)
 })
+
+peer2.on('stream', function (stream) {
+    // got remote video stream, now let's show it in a video tag
+    var video = document.querySelector('video')
+    video.src = window.URL.createObjectURL(stream)
+    video.play()
+  })
