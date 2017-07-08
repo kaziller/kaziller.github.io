@@ -1,41 +1,23 @@
-var SimplePeer = require('simple-peer')
+var Peer = require('simple-peer')
+var p = new Peer({ initiator: location.hash === '#1', trickle: false })
 
-// get video/voice stream
-// navigator.getUserMedia({ video: true, audio: true }, gotMedia, function () {})
+p.on('error', function (err) { console.log('error', err) })
 
-function gotMedia (data) {
-  // var peer1 = new SimplePeer({ initiator: true, stream: stream })
-  var peer2 = new SimplePeer()
+p.on('signal', function (data) {
+  console.log('SIGNAL', JSON.stringify(data))
+  document.querySelector('#outgoing').textContent = JSON.stringify(data)
+})
 
-  // peer1.on('signal', function (data) {
-  //   peer2.signal(data)
-  // })
+document.querySelector('form').addEventListener('submit', function (ev) {
+  ev.preventDefault()
+  p.signal(JSON.parse(document.querySelector('#incoming').value))
+})
 
-  // peer2.on('signal', function (data) {
-  //   peer1.signal(data)
-  // })
+p.on('connect', function () {
+  console.log('CONNECT')
+  p.send('whatever' + Math.random())
+})
 
-  peer2.signal(data);
-
-  peer2.on('stream', function (stream) {
-    console.log(stream);
-    // got remote video stream, now let's show it in a video tag
-    var video = document.querySelector('video')
-    video.src = window.URL.createObjectURL(stream)
-    video.play()
-    console.log('video created');
-  })
-}
-
-var signalhub = require('signalhub')
-var hub = signalhub('my-app-name', [
-  'https://cloudbrowsersignalingserver.herokuapp.com/'
-])
-
-hub.subscribe('my-channel')
-  .on('data', function (message) {
-    console.log('new message received', message)
-    if(message.type === 'offer') {
-      gotMedia(message);
-    }
-  });
+p.on('data', function (data) {
+  console.log('data: ' + data)
+})
