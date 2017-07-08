@@ -1,27 +1,29 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var Peer = require('simple-peer');
-var p = new Peer({ initiator: location.hash === '#1', trickle: false });
+var SimplePeer = require('simple-peer')
 
-p.on('error', function (err) { console.log('error', err) });
+// get video/voice stream
+navigator.getUserMedia({ video: true, audio: true }, gotMedia, function () {})
 
-p.on('signal', function (data) {
-  console.log('SIGNAL', JSON.stringify(data));
-  document.querySelector('#outgoing').textContent = JSON.stringify(data);
-})
+function gotMedia (stream) {
+  var peer1 = new SimplePeer({ initiator: true, stream: stream })
+  var peer2 = new SimplePeer()
 
-document.querySelector('form').addEventListener('submit', function (ev) {
-  ev.preventDefault();
-  p.signal(JSON.parse(document.querySelector('#incoming').value));
-})
+  peer1.on('signal', function (data) {
+    peer2.signal(data)
+  })
 
-p.on('connect', function () {
-  console.log('CONNECT');
-  p.send('whatever' + Math.random());
-})
+  peer2.on('signal', function (data) {
+    peer1.signal(data)
+  })
 
-p.on('data', function (data) {
-  console.log('data: ' + data);
-})
+  peer2.on('stream', function (stream) {
+    console.log(stream);
+    // got remote video stream, now let's show it in a video tag
+    var video = document.querySelector('video')
+    video.src = window.URL.createObjectURL(stream)
+    video.play()
+  })
+}
 },{"simple-peer":21}],2:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
