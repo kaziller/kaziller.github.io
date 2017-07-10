@@ -1,4 +1,19 @@
 var Peer = require('simple-peer')
+var signalhub = require('signalhub')
+var hub = signalhub('my-app-name', [
+  'https://cloudbrowsersignalingserver.herokuapp.com/'
+])
+
+
+hub.subscribe('my-channel')
+  .on('data', function (message) {
+    console.log('new message received')
+    if(JSON.parse(message).type === 'offer') {
+    ev.preventDefault()
+    p.signal(message);
+    }
+  })
+  
 var p = new Peer({ initiator: false, trickle: false })
 
 p.on('error', function (err) { console.log('error', err) })
@@ -6,6 +21,7 @@ p.on('error', function (err) { console.log('error', err) })
 p.on('signal', function (data) {
   console.log('SIGNAL', JSON.stringify(data))
   document.querySelector('#outgoing').textContent = JSON.stringify(data)
+  hub.broadcast('my-channel', JSON.stringify(data));
 })
 
 document.querySelector('form').addEventListener('submit', function (ev) {
