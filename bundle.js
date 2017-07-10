@@ -7092,11 +7092,10 @@ hub.subscribe('my-channel')
   .on('data', function (message) {
     console.log('new message received')
     if(JSON.parse(message).type === 'offer') {
-    ev.preventDefault()
     p.signal(message);
     }
   })
-  
+
 var p = new Peer({ initiator: false, trickle: false })
 
 p.on('error', function (err) { console.log('error', err) })
