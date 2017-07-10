@@ -4,12 +4,14 @@ var hub = signalhub('my-app-name', [
   'https://cloudbrowsersignalingserver.herokuapp.com/'
 ])
 
+var isConnected = false;
 
 hub.subscribe('my-channel')
   .on('data', function (message) {
     console.log('new message received')
-    if(JSON.parse(message).type === 'offer') {
+    if(JSON.parse(message).type === 'offer' && !isConnected) {
     p.signal(message);
+    isConnected = true;
     }
   })
 
