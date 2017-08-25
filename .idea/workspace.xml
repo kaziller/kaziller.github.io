@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd95c65b-8f6a-4bde-9821-7444ae1e887b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-08-25-My-first-blog-post.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,37 +20,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="2017-08-25-welcome-to-jekyll.markdown" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-08-25-welcome-to-jekyll.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6225">
-              <caret line="415" column="179" lean-forward="false" selection-start-line="415" selection-start-column="174" selection-end-line="415" selection-end-column="179" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3363#3369#0" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#li#0;n#ol#0;n#section#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#li#1;n#ol#0;n#section#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#20978#20982#0" expanded="true" />
-                <element signature="e#21032#21036#0" expanded="true" />
-                <element signature="e#21036#21040#0" expanded="true" />
-                <element signature="e#21047#21051#0" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#section#8;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1497082680000" expanded="true" signature="9760:9778" ph="..." />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="screen.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/screen.js">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="220">
+              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-08-25-My-first-blog-post.markdown" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-08-25-My-first-blog-post.markdown">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -77,6 +74,8 @@
         <option value="$PROJECT_DIR$/peer.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/screen.js" />
+        <option value="$PROJECT_DIR$/_posts/2017-08-25-welcome-to-jekyll.markdown" />
+        <option value="$PROJECT_DIR$/_posts/2017-08-25-My-first-blog-post.markdown" />
       </list>
     </option>
   </component>
@@ -106,8 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -120,8 +117,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kaziller.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kaziller.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,11 +177,12 @@
       <updated>1497089680756</updated>
       <workItem from="1497089682340" duration="4120000" />
       <workItem from="1497182478653" duration="418000" />
+      <workItem from="1503648611753" duration="959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4538000" />
+    <option name="totallyTimeSpent" value="5497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -209,69 +223,41 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/screen.js" />
+    <entry file="file://$PROJECT_DIR$/jquery-3.2.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/peer.js" />
+    <entry file="file://$PROJECT_DIR$/ps-webrtc-peerjs-final.js" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/screen.js" />
+    <entry file="file://$PROJECT_DIR$/_site/jekyll/update/2017/08/25/welcome-to-jekyll.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3363#3369#0" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#0;n#ol#0;n#section#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#1;n#ol#0;n#section#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#20978#20982#0" expanded="true" />
-            <element signature="e#21032#21036#0" expanded="true" />
-            <element signature="e#21036#21040#0" expanded="true" />
-            <element signature="e#21047#21051#0" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#section#8;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1497082680000" expanded="true" signature="9760:9778" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jquery-3.2.1.min.js" />
-    <entry file="file://$PROJECT_DIR$/peer.js" />
-    <entry file="file://$PROJECT_DIR$/ps-webrtc-peerjs-final.js" />
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6225">
-          <caret line="415" column="179" lean-forward="false" selection-start-line="415" selection-start-column="174" selection-end-line="415" selection-end-column="179" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3363#3369#0" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#0;n#ol#0;n#section#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#1;n#ol#0;n#section#1;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#20978#20982#0" expanded="true" />
-            <element signature="e#21032#21036#0" expanded="true" />
-            <element signature="e#21036#21040#0" expanded="true" />
-            <element signature="e#21047#21051#0" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#section#7;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#section#8;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1497082680000" expanded="true" signature="9760:9778" ph="..." />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screen.js">
+    <entry file="file://$PROJECT_DIR$/_posts/2017-08-25-welcome-to-jekyll.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-08-25-My-first-blog-post.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
           <folding />
         </state>
       </provider>
